@@ -12,10 +12,10 @@ class Result extends Component {
 
   render() {
 
-
     return (
       <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h2>This is text</h2>
+          <h4>fontsize: {this.props.fontSize}</h4>
+          <h2>123123</h2>
       </div>
     );
   }

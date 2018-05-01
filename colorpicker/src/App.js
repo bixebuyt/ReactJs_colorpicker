@@ -6,7 +6,17 @@ import Result from './components/Result';
 // import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fontSize: 12
+    }
+  }
+  onChangeSize(value) {
+    console.log(value)
+  }
   render() {
+    console.log(this.state.fontSize);
     return (
       <div className="container">
         <div className="row">
@@ -15,8 +25,11 @@ class App extends Component {
               <h1>Welcome to Colorpicker</h1>
             </header>
             <Colorpicker />
-            <Customfontsize />
-            <Result />
+            <Customfontsize
+              fontSize={this.state.fontSize}
+              onChangeSize={this.onChangeSize}
+            />
+            <Result fontSize={this.state.fontSize} />
           </div>
         </div>
       </div>
